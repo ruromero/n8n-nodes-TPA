@@ -3,9 +3,9 @@ import {
 	INodeProperties
 } from 'n8n-workflow';
 
-export class TrustifyClientCred implements ICredentialType {
-	name = 'trustifyClientCred';
-	displayName = 'Trustify Client Credentials (Machine-to-Machine)';
+export class TrustifyClientOAuth2Api implements ICredentialType {
+	name = 'trustifyClientOAuth2Api';
+	displayName = 'Trustify Client Credentials (Machine-to-Machine) OAuth2 API';
 	documentationUrl = 'https://access.redhat.com/products/red-hat-trusted-profile-analyzer';
 	extends = ['oAuth2Api'];
 	properties: INodeProperties[] = [
@@ -55,4 +55,4 @@ export class TrustifyClientCred implements ICredentialType {
 			default: 'header',
 		},
 	];
-} 
+}
