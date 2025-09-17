@@ -1,11 +1,8 @@
-import {
-	ICredentialType,
-	INodeProperties
-} from 'n8n-workflow';
+import { ICredentialType, INodeProperties } from 'n8n-workflow';
 
-export class TrustifyAuthCode implements ICredentialType {
-	name = 'trustifyAuthCode';
-	displayName = 'Trustify Authorization Code (User Authentication)';
+export class TrustifyAuthCodeOAuth2Api implements ICredentialType {
+	name = 'trustifyAuthCodeOAuth2Api';
+displayName = 'Trustify (Authorization Code - User Authentication) OAuth2 API';
 	documentationUrl = 'https://access.redhat.com/products/red-hat-trusted-profile-analyzer';
 	extends = ['oAuth2Api'];
 	properties: INodeProperties[] = [
@@ -13,14 +10,16 @@ export class TrustifyAuthCode implements ICredentialType {
 			displayName: 'Authorization URL',
 			name: 'authUrl',
 			type: 'string' as const,
-			default: 'https://sso-trustify.apps.cluster.trustification.rocks/realms/chicken/protocol/openid-connect/auth',
+			default:
+				'https://sso-trustify.apps.cluster.trustification.rocks/realms/chicken/protocol/openid-connect/auth',
 			description: 'URL where users authorize the application (required for user authentication)',
 		},
 		{
 			displayName: 'Access Token URL',
 			name: 'accessTokenUrl',
 			type: 'string' as const,
-			default: 'https://sso-trustify.apps.cluster.trustification.rocks/realms/chicken/protocol/openid-connect/token',
+			default:
+				'https://sso-trustify.apps.cluster.trustification.rocks/realms/chicken/protocol/openid-connect/token',
 			description: 'URL for exchanging credentials for access token',
 			required: true,
 		},
@@ -62,4 +61,4 @@ export class TrustifyAuthCode implements ICredentialType {
 			default: 'header',
 		},
 	];
-} 
+}

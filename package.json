@@ -1,15 +1,15 @@
 {
-  "name": "n8n-nodes-TPA",
+  "name": "n8n-nodes-tpa",
   "version": "0.1.0",
-  "description": "",
+  "description": "Trustify is an open-source project developed by Red Hat that provides a high-performance, searchable backend for software supply chain metadata. It enables security and development teams to store, query, and analyze data such as Software Bills of Materials (SBOMs), vulnerabilities (CVEs), and vendor advisories in standardized formats like SPDX, CycloneDX, and OSV.\n Integrated into modern CI/CD workflows, Trustify helps organizations improve visibility into their software supply chain, proactively identify risks, and reduce vulnerability management fatigue. As part of the OpenSSF’s GUAC project, Trustify contributes to building a unified, community-driven ecosystem for managing security metadata at scale—making it easier to understand provenance, assess vulnerability impact, and strengthen software resilience.",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Adva Oren",
+    "email": "aoren@redhat.om"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^24.3.0",
     "@typescript-eslint/parser": "~8.32.0",
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",
